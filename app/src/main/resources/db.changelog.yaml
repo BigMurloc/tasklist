@@ -14,4 +14,12 @@ databaseChangeLog:
         relativeToChangelogFile: true
         stripComments: true
         splitStatements: false
-        path: db.changelog/20210206_1_init.sql
+        path: 20210206_1_add_basic_user.sql
+  - changeSet:
+      id: 20210206_2_add_authority.sql
+      author: Dominik Pasymowski
+      sqlFile:
+        relativeToChangelogFile: true
+        stripComments: true
+        splitStatements: false
+        path: 20210206_2_add_authority.sql
