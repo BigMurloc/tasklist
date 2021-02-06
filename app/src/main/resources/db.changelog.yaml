@@ -1,9 +1,17 @@
 databaseChangeLog:
   - changeSet:
-      id: 20210206_init.sql
+      id: 20210206_0_init.sql
       author: Dominik Pasymowski
       sqlFile:
         relativeToChangelogFile: true
         stripComments: true
         splitStatements: false
-        path: db.changelog/20210206_init.sql
+        path: db.changelog/20210206_0_init.sql
+  - changeSet:
+      id: 20210206_1_add_basic_user.sql
+      author: Dominik Pasymowski
+      sqlFile:
+        relativeToChangelogFile: true
+        stripComments: true
+        splitStatements: false
+        path: db.changelog/20210206_1_init.sql
