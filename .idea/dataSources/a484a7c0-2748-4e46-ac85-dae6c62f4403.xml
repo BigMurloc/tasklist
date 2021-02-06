@@ -1408,7 +1408,7 @@ false posix/WET
 false posix/Zulu
 false posixrules
 </TimeZones>
-      <StartupTime>1612568253</StartupTime>
+      <StartupTime>1612603797</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
       <ObjectId>13395</ObjectId>
@@ -1418,7 +1418,7 @@ false posixrules
     <database id="3" parent="1" name="tasklist">
       <ObjectId>16384</ObjectId>
       <Owner>admin</Owner>
-      <IntrospectionStateNumber>487</IntrospectionStateNumber>
+      <IntrospectionStateNumber>514</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="4" parent="1" name="admin">
@@ -1489,7 +1489,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>admin</Owner>
-      <IntrospectionStateNumber>488</IntrospectionStateNumber>
+      <IntrospectionStateNumber>515</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="3" name="plpgsql">
@@ -1589,5 +1589,277 @@ UC/10
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
+    <table id="30" parent="17" name="authority">
+      <ObjectId>24584</ObjectId>
+      <Owner>admin</Owner>
+      <StateNumber>510</StateNumber>
+    </table>
+    <table id="31" parent="17" name="databasechangelog">
+      <ObjectId>16390</ObjectId>
+      <Owner>admin</Owner>
+      <StateNumber>500</StateNumber>
+    </table>
+    <table id="32" parent="17" name="databasechangeloglock">
+      <ObjectId>16385</ObjectId>
+      <Owner>admin</Owner>
+      <StateNumber>489</StateNumber>
+    </table>
+    <table id="33" parent="17" name="user">
+      <ObjectId>24577</ObjectId>
+      <Owner>admin</Owner>
+      <StateNumber>510</StateNumber>
+    </table>
+    <table id="34" parent="17" name="user_authority">
+      <ObjectId>24589</ObjectId>
+      <Owner>admin</Owner>
+      <StateNumber>510</StateNumber>
+    </table>
+    <column id="35" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>509</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="36" parent="30" name="authority">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <StateNumber>509</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="37" parent="30" name="authority_pkey">
+      <ObjectId>24587</ObjectId>
+      <StateNumber>509</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <key id="38" parent="30" name="authority_pkey">
+      <ObjectId>24588</ObjectId>
+      <StateNumber>509</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>authority_pkey</UnderlyingIndexName>
+    </key>
+    <column id="39" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="40" parent="31" name="author">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="31" name="filename">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="42" parent="31" name="dateexecuted">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>500</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="43" parent="31" name="orderexecuted">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>500</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="44" parent="31" name="exectype">
+      <Position>6</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="45" parent="31" name="md5sum">
+      <Position>7</Position>
+      <DataType>varchar(35)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="46" parent="31" name="description">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="47" parent="31" name="comments">
+      <Position>9</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="48" parent="31" name="tag">
+      <Position>10</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="31" name="liquibase">
+      <Position>11</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="31" name="contexts">
+      <Position>12</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="51" parent="31" name="labels">
+      <Position>13</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="52" parent="31" name="deployment_id">
+      <Position>14</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <StateNumber>500</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="53" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>489</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="54" parent="32" name="locked">
+      <Position>2</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>489</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="55" parent="32" name="lockgranted">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>489</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="56" parent="32" name="lockedby">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>489</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="57" parent="32" name="databasechangeloglock_pkey">
+      <ObjectId>16388</ObjectId>
+      <StateNumber>489</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>1978</ClassIds>
+    </index>
+    <key id="58" parent="32" name="databasechangeloglock_pkey">
+      <ObjectId>16389</ObjectId>
+      <StateNumber>489</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>databasechangeloglock_pkey</UnderlyingIndexName>
+    </key>
+    <column id="59" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>508</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="60" parent="33" name="username">
+      <Position>2</Position>
+      <DataType>varchar(16)|0s</DataType>
+      <StateNumber>508</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="61" parent="33" name="password">
+      <Position>3</Position>
+      <DataType>varchar(16)|0s</DataType>
+      <StateNumber>508</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="62" parent="33" name="user_pkey">
+      <ObjectId>24580</ObjectId>
+      <StateNumber>508</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <index id="63" parent="33" name="user_username_key">
+      <ObjectId>24582</ObjectId>
+      <StateNumber>508</StateNumber>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>100</CollationIds>
+      <CollationNames>default</CollationNames>
+      <ClassIds>3126</ClassIds>
+    </index>
+    <key id="64" parent="33" name="user_pkey">
+      <ObjectId>24581</ObjectId>
+      <StateNumber>508</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>user_pkey</UnderlyingIndexName>
+    </key>
+    <key id="65" parent="33" name="user_username_key">
+      <ObjectId>24583</ObjectId>
+      <StateNumber>508</StateNumber>
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>user_username_key</UnderlyingIndexName>
+    </key>
+    <column id="66" parent="34" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>510</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="67" parent="34" name="authority_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>510</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="68" parent="34" name="fk_user_id">
+      <ObjectId>24592</ObjectId>
+      <StateNumber>510</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>24577</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="69" parent="34" name="fk_authority_id">
+      <ObjectId>24597</ObjectId>
+      <StateNumber>510</StateNumber>
+      <ColNames>authority_id</ColNames>
+      <RefTableId>24584</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>authority</RefTableName>
+      <RefKeyName>authority_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
