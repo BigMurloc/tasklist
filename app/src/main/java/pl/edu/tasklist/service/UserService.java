@@ -17,7 +17,17 @@ public class UserService {
 
     @Transactional
     public void save(User user){
+        String query = "SELECT count(user) FROM User user WHERE user.username =: username";
+        Long count = (Long) entityManager
+                .createQuery(query)
+                .setParameter("username", user.getUsername())
+                .getSingleResult();
+        if(count != 0){
+            throw new RuntimeException("TODO");
+        }
         entityManager.persist(user);
     }
+
+
 
 }

@@ -1,4 +1,4 @@
-package pl.edu.tasklist;
+package pl.edu.tasklist.user;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringRunner;
+import pl.edu.tasklist.IntegrationTest;
 import pl.edu.tasklist.entity.User;
 
 import static io.restassured.RestAssured.given;
