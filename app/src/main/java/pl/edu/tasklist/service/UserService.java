@@ -17,17 +17,21 @@ public class UserService {
 
     @Transactional
     public void save(User user){
-        String query = "SELECT count(user) FROM User user WHERE user.username =: username";
-        Long count = (Long) entityManager
-                .createQuery(query)
-                .setParameter("username", user.getUsername())
-                .getSingleResult();
+        Long count = doesExist(user.getUsername());
         if(count != 0){
             throw new RuntimeException("TODO");
         }
         entityManager.persist(user);
     }
 
+    private Long doesExist(String username) {
+        String query = "SELECT count(user) FROM User user WHERE user.username =: username";
+        Long count = (Long) entityManager
+                .createQuery(query)
+                .setParameter("username", username)
+                .getSingleResult();
+        return count;
+    }
 
 
 }
