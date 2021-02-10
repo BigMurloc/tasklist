@@ -1,7 +1,9 @@
 package pl.edu.tasklist.service;
 
+import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 import pl.edu.tasklist.entity.User;
+import pl.edu.tasklist.exception.UserAlreadyExistsException;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
@@ -16,10 +18,10 @@ public class UserService {
     }
 
     @Transactional
-    public void save(User user){
+    public void save(User user) throws UserAlreadyExistsException {
         Long count = doesExist(user.getUsername());
         if(count != 0){
-            throw new RuntimeException("TODO");
+            throw new UserAlreadyExistsException();
         }
         entityManager.persist(user);
     }
